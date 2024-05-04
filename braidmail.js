@@ -20,7 +20,7 @@ var curr_version = () => [ (resources['/feed'].length + '') ]
 try {
     var resources = JSON.parse(Deno.readFileSync('db'))
 } catch (e) {}
-function save_db () { Deno.writeFileSync('db', JSON.stringify(resources, null, 2)) }
+function save_db () { Deno.writeTextFile('db', JSON.stringify(resources, null, 2)) }
 
 
 // Subscriptions

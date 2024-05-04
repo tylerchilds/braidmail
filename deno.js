@@ -13,7 +13,7 @@ app.get('/', sendfile('demo.html'))
 app.use('/public', express.static('public'))
 app.use(braidmail)
 
-app.listen();
+app.listen(port);
 console.log('client running on: ', port)
 
 // Free the CORS!
